@@ -55,7 +55,10 @@ class Choice:
         return rv
 
     def pairs(self, *names):
-        rv = [(i, n) for i, n in self._choices if n in names]
-        if len(rv) != len(names):
-            raise Error(names, self.__class__.__name__)
+        if names:
+            rv = [(i, n) for i, n in self._choices if n in names]
+            if len(rv) != len(names):
+                raise Error(names, self.__class__.__name__)
+        else:
+            rv = [(i, n) for i, n in self._choices]
         return rv

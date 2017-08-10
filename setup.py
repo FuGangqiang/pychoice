@@ -9,7 +9,7 @@ with open(os.path.join(here, 'README.rst')) as f:
 
 setup(
     name='pychoice',
-    version='0.1.0',
+    version='0.1.1',
     description='An utility adds code readability to your application and/or API, Code is documentation!',
     long_description=long_description,
     url='https://github.com/FuGangqiang/pychoice',
